@@ -73,12 +73,10 @@ terraform plan
 terraform apply
 ```
 
-## 出力情報
+## 実行結果
+terraform.tfvarsで設定した名前のリポジトリが作成できた
 
-実行後、以下の情報が出力されます：
-
-- `repository_urls`: 作成された各リポジトリのURL
-- `repository_count`: 作成されたリポジトリの総数
+![](./Docs/result.png)
 
 ## 注意事項
 ### 制限事項
