@@ -1,5 +1,3 @@
-# Minimal Terraform configuration for 50 basic GitHub repositories
-
 terraform {
   required_providers {
     github = {
@@ -34,9 +32,14 @@ variable "repository_visibility" {
   default     = "private"
 }
 
-# Create repositories with minimal configuration
+variable "repository_names" {
+  description = "List of repository names to create"
+  type        = list(string)
+  default     = []
+}
+
 resource "github_repository" "repositories" {
-  for_each = toset(local.repositories)
+  for_each = toset(var.repository_names)
 
   name       = each.value
   visibility = var.repository_visibility
@@ -47,11 +50,6 @@ resource "github_repository" "repositories" {
 output "repository_urls" {
   description = "URLs of all created repositories"
   value = {
-    for repo in local.repositories : repo => github_repository.repositories[repo].html_url
+    for repo in var.repository_names : repo => github_repository.repositories[repo].html_url
   }
-}
-
-output "repository_count" {
-  description = "Total number of repositories created"
-  value = length(local.repositories)
 }
