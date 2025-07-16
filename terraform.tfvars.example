@@ -1,0 +1,16 @@
+# GitHub Personal Access Token 
+github_token = "ghp_your_github_personal_access_token_here"
+
+# GitHub Organization名 
+github_organization = "your-organization-name"
+
+# リポジトリの可視性 
+repository_visibility = "private"
+
+# リポジトリ名一覧 
+repository_names = [
+  "my-project-01",
+  "my-project-02",
+  "my-project-03",
+  # ... 50個まで
+]
