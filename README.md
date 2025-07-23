@@ -1,5 +1,3 @@
-# # GitHub Repository Batch Creation with Terraform
-
 このプロジェクトは、Terraformを使用してGitHubに複数のリポジトリを一括作成するためのコードです。
 
 ## 前提条件

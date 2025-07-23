@@ -7,6 +7,12 @@ github_organization = "your-organization-name"
 # リポジトリの可視性 
 repository_visibility = "private"
 
+# 機能の有効化設定
+enable_issues      = true   # Issuesタブを有効化
+enable_wiki        = true   # Wikiタブを有効化  
+enable_projects    = true   # Projectsタブを有効化
+enable_discussions = false  # Discussionsタブを有効化（デフォルト無効）
+
 # リポジトリ名一覧 
 repository_names = [
   "my-project-01",
